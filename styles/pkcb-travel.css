@@ -1,60 +1,114 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-
-body{
-    font-family: 'Poppins', sans-serif;
-}
-
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
 /* Navbar style start */
-
-.header-section{
-    max-width: 1240px;
-    /* background-color: aquamarine; */
-    margin: 25px auto;
-    display: flex;
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #1b1b1b;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
 }
-
-.nav-container{
-    /* border: 2px solid red; */
-    min-height: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: 50%;
-    /* margin-left: 20px; */
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+  display: flex;
+  gap: 10px;
 }
-
-.nav-container h3{
-    font-size: 30px;
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
 }
-
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
 .special{
     color: orangered;
 }
-
-.items-container{
-    /* border: 2px solid yellow; */
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 15px;
-}
-
-.items-container a{
-    text-decoration: none;
-}
-
 /* Navbar style end */
 
-/* explore banner style start */
+/* 2nd section hero banner style start */
 
-.banner-explore{
+.banner-explore {
     /* background-image: url(../Images/Group\ 13\ \(1\)\ \(1\).png); */
     border-radius: 16px;
     z-index: -1;
@@ -64,7 +118,11 @@ body{
     background-size: cover;
     height: 500px;
     max-width: 1240px;
-    margin: 15px auto;
+    /* margin: 15px auto; */
+    margin-left: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -72,29 +130,30 @@ body{
     gap: 35px;
 }
 
-.banner-explore h2{
-font-size: 4em;
-color: white;
-font-weight: 800;
+.banner-explore h2 {
+    font-size: 4em;
+    color: white;
+    font-weight: 800;
 }
 
-.banner-explore{
+.banner-explore {
     font-size: 15px;
-   color: white;
-   text-align: center;
+    color: white;
+    text-align: center;
 }
 
-.banner-input{
+.banner-input {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 700px;
     height: 80px;
-    background-color:  rgba(255, 255, 255, 0.30);
+    background-color: rgba(255, 255, 255, 0.30);
     border-radius: 10px;
 }
 
-.banner-input input, button{
+.banner-input input,
+button {
     height: 40px;
     padding: 5px;
     width: 150px;
@@ -102,107 +161,56 @@ font-weight: 800;
     border-radius: 10px;
 }
 
-.banner-input button{
+.banner-input button {
     background-color: orangered;
     color: white;
     font-size: 1em;
     font-weight: 700;
 }
-
-
-/* explore banner style end */
-
+/* 2nd section hero banner style end */
 /* popular section style start */
 
-.popular-section{
+.popular-section {
     max-width: 1240px;
     margin: 25px auto;
 }
 
-.popular{
+.popular {
     display: flex;
     justify-content: space-around;
 }
 
-.text-container{
+.text-container {
     width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-.text-container h2{
+.text-container h2 {
     font-size: 2em;
     font-weight: 700;
 }
 
-.text-container p, li{
+.text-container p,
+li {
     font-size: 15px;
     font-weight: 400;
 }
 
-.text-container button{
+.text-container button {
     background-color: orangered;
     color: white;
     font-size: 1em;
     font-weight: 700;
 }
 
-.image-container{
+.image-container {
     width: 45%;
 }
-
 /* popular section style end */
 
 /* Image grid section style start */
-
-/* .image-grid-section{
-    max-width: 1240px;
-    margin: 20px auto;
-}
-
-.maldives, .indonesia, .srilanka, .north-america, .kashmir, .bangladesh, .bandarban{
-    background-color: bisque;
-    border: 2px solid tomato;
-    padding: 5px;
-    border: 5px;
-}
-
-.maldives{
-    background-image: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%), url('../Images/Group\ 13\ \(1\)\ \(1\).png');
-    grid-area: maldives;
-    height: 100vh;
-    width: 100vh;
-}
-.indonesia{
-    grid-area: indonesia;
-}
-.srilanka{
-    grid-area: srilanka;
-}
-.north-america{
-    grid-area: north-america;
-}
-.kashmir{
-    grid-area: kashmir;
-}
-.bangladesh{
-    grid-area: bangladesh;
-}
-.bandarban{
-    grid-area: bandarban;
-}
-
-.grid-image{
-    display: grid;
-    gap: 20px;
-    grid-template-areas: 
-    "maldives  maldives  indonesia  indonesia"
-    "srilanka  north-america  north-america  kashmir"
-    "bangladesh bandarban  bandarban bandarban"
-    ;
-} */
-
 .grid-title{
     text-align: center;
 
@@ -258,8 +266,31 @@ font-size: 2rem;
 .bandarban{
     width: 53%;
 }
-
 /* Image grid section style end */
+
+/* why chose style start */
+.tex-content{
+    text-align: center;
+}
+.chose-cards{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    gap: 20px;
+}
+.card-1, .card-2, .card-3{
+    border: 1px solid grey;
+    padding: 10px;
+    width: 300px;
+    border-radius: 16px;
+}
+.card-3{
+    justify-content: center;
+    margin-left: 37%;
+    margin-bottom: 20px;
+}
+/* why chose style end */
 
 /* Newsletter RELATED */
 
@@ -271,6 +302,7 @@ background: #f19e9e;
     margin-left: 55px;
     margin-right: 35px;
     margin-bottom: 20px;
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -353,15 +385,17 @@ font-weight: 800;
 line-height: normal;
 text-align: center;
 }
+
+/* FOOTER RELATED */
 /* FOOTER RELATED */
 
 .footer{
     background: rgba(19, 19, 24, 0.05);
-    width: 1175px;
-height: 450px;
+    width: 1263px;
+height: 400px;
 flex-shrink: 0;
-margin-left: 55px;
-margin-right: 35px;
+/* margin-left: px;
+margin-right: 5px; */
 margin-bottom: 10px;
 margin-top: 10px;
 display: flex;
@@ -374,15 +408,16 @@ justify-content: center;
 flex-direction: column;
 } */
 
-.logo{   
+.footer-logo{   
     min-height: 20px;
     display: flex;
-    /* flex-direction: ; */
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 10px;
     width: 50%;
-    margin-top: 10px; 
+    margin-top: 10px;
+    /* height: 10%;  */
 }
 
 .footer-text{
@@ -406,11 +441,11 @@ line-height: 26px; /* 162.5% */
     display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 25px;
-  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   gap: 10px;
   width: -200px;
-  height: 5%;
+  height: 10%;
 }
 
 .copy-right{
@@ -426,4 +461,5 @@ line-height: normal;
   margin-top: 30px;
   margin-bottom: 20px;
 }
+
 
