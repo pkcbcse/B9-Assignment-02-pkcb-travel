@@ -1,0 +1,80 @@
+/* responsive for small device */
+@media screen and (max-width:600px) {
+
+    .banner-headline h2 {
+        font-size: 3em;
+    }
+
+    .banner-text p {
+        font-size: 10px;
+    }
+
+    .banner-input {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 200px;
+        height: 250px;
+    }
+
+    .text-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .image-container img {
+        width: 100%;
+        position: absolute;
+    }
+
+    .popular {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .first-flex, .second-flex, .third-flex {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+    }
+
+    .maldives, .indonesia{
+        margin-top: 85px;
+    }
+    .maldives {
+        width: 100%;
+}
+    .indonesia {
+        width: 100%;
+}
+    .srilanka {
+        width: 100%;
+}
+    .north-america {
+        width: 100%;
+}
+    .kashmir {
+        width: 100%;
+}
+    .bangladesh {
+        width: 100%;
+}
+    .bandarban img {
+        width: auto;
+}
+.chose-cards{
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    gap: 20px;
+}
+.last-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+}
