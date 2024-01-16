@@ -294,163 +294,88 @@ font-size: 2rem;
 
 /* Newsletter RELATED */
 
-.section-7{
-    
-background: #f19e9e;
-    max-width: 1175px;
-    /* height: 400px; */
-    margin-left: 55px;
-    margin-right: 35px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+/* newletter style start */
+.newsletter-section{
+    max-width: 1240px;
+    margin: 25px auto;
 }
-
-
-.Newsletter{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    margin-left: 20px;
-}
-
-.Newsletter-text{
-   width: 45%;
-    width: 500px;
-    height: 80px;
-}  
-.Newsletter-input input, button{
-    width: 500px;
-    height: 80px;
-    padding: 10px;
-    background-color:  rgba(255, 255, 255, 0.30);
+.input-name, .input-email{
     border-radius: 8px;
-    border: none;
-    /* gap: 5px; */
+    background-color: rgba(19, 19, 24, 0.05);
+    height: 35px;
+    padding-left: 10px;
 }
-.Newsletter-input button{
+.subscribe-button{
+    width: 100%;
+    height: 35px;
     background-color: orangered;
     color: white;
-    font-size: 1em;
-    font-weight: 700;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    font-weight: 600;
 }
-
-.section-7-img-1{
-    border-radius: 10px;
-background: url('../Images/Rectangle\ 8.png'), lightgray 50%;
-background-repeat: no-repeat;
-width: 575px;
-height: 300px; 
-margin-right: 0px;
-display: flex; 
-justify-content: right;
-
-
+.newsletter-text{
+    border: 1px solid orangered;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 36%;
 }
-.sec-7-text{
-    border-radius: 16px;
-background: #FF5400;
-width: 300px;
-height: 100px;
-transform: rotate(-19.628deg);
-flex-shrink: 0;
-display: flex;
-flex-direction: column;
-text-align: center;
-justify-content: center;
-margin-top: -600;
+.newsletter-image{
+    width: 672px;
+    height: 422px;
+    background-image: url(../Images/Rectangle\ 8\ \(1\).png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.newsletter-image img{
+width: 100%;
 
 }
-.sec-7-text-1{
-/* transform: rotate(-19.628deg); */
-color: #FFF;
-text-align: center;
-font-family: Mulish;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+.discount{
+    background-color: orangered;
+    width: 324px;
+    height: 120px;
+    border-radius: 8px;
+    transform: rotate(-19.628deg);
+    flex-shrink: 0;
+    margin-left: 49%;
+    margin-top: 37%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
-.sec-7-text-2{
-    /* transform: rotate(-19.628deg); */
-    color: #FFF;
-font-family: Mulish;
-font-size: 32px;
-font-style: normal;
-font-weight: 800;
-line-height: normal;
-text-align: center;
+.newsletter-container{
+    display: flex;
+    justify-content: space-around;   
 }
-
-/* FOOTER RELATED */
+/* newsletter style end */
 /* FOOTER RELATED */
 
+/* footer style start */
+.footer-logo{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.footer-icon{
+    display: flex;
+    gap: 20px;
+}
 .footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
     background: rgba(19, 19, 24, 0.05);
     width: 1263px;
-height: 400px;
+height: 502px;
 flex-shrink: 0;
-/* margin-left: px;
-margin-right: 5px; */
-margin-bottom: 10px;
-margin-top: 10px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-
 }
-/* .footer-part{
-display: flex;
-justify-content: center;
-flex-direction: column;
-} */
-
-.footer-logo{   
-    min-height: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: 50%;
-    margin-top: 10px;
-    /* height: 10%;  */
-}
-
-.footer-text{
-    /* width: 769px; */
-    color: #5A5A5D;
-text-align: center;
-display: flex;
-    flex-direction: row;
-    align-items: center;
-justify-content: center;
-font-family: Mulish;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 26px; /* 162.5% */
- margin-top: 25px;
-  margin-bottom: 20px;
-}
-
-.footer-image{
-    display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  gap: 10px;
-  width: -200px;
-  height: 10%;
-}
-
-.copy-right{
-    display: flex;
+/* .Copyright{
+  display: flex;
     flex-direction: row;
     justify-content: center;
     color: #131318;
@@ -461,6 +386,5 @@ font-weight: 300;
 line-height: normal;
   margin-top: 30px;
   margin-bottom: 20px;
-}
-
+} */
 
